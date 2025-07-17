@@ -18,14 +18,17 @@ Proje içerisinde:
 
 src/
 ├── Project.Api // API katmanı (Controller, Program.cs)
+
 ├── Project.Application // Business logic, Services, Interfaces
+
 ├── Project.Domain // Entity (Product)
+
 ├── Project.Infrastructure // ElasticSearch işlemleri (Repository, Client)
+
 test/
 ├── Testler (isteğe bağlı)
 
 
----
 
 ## 🛠️ Kurulum
 
@@ -55,8 +58,6 @@ services:
 volumes:
   elasticsearch-data:
     driver: local
-
----
 
 Çalıştır:
 
@@ -120,5 +121,3 @@ Serilog
 Bogus
 
 Docker / Docker Compose
-
-
