@@ -56,6 +56,8 @@ volumes:
   elasticsearch-data:
     driver: local
 
+---
+
 Çalıştır:
 
 bash
