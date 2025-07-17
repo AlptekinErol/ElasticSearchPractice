@@ -17,6 +17,7 @@ Proje içerisinde:
 ## 🗂️ Klasör Yapısı
 
 src/
+
 ├── Project.Api // API katmanı (Controller, Program.cs)
 
 ├── Project.Application // Business logic, Services, Interfaces
@@ -26,6 +27,7 @@ src/
 ├── Project.Infrastructure // ElasticSearch işlemleri (Repository, Client)
 
 test/
+
 ├── Testler (isteğe bağlı)
 
 
