@@ -16,4 +16,8 @@ Bu proje, **.NET 8 Web API** ile geliştirilmiş bir **ElasticSearch CRUD servis
 ---
 
 ## 🗂️ Klasör Yapısı
-
+src/
+├── Project.Api -> API Katmanı (Controller, Program.cs)
+├── Project.Application -> İş Mantığı, Services, Interfaces
+├── Project.Domain -> Entity (Product)
+├── Project.Infrastructure -> ElasticSearch işlemleri (Repository, Client)
