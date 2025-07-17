@@ -1,3 +1,4 @@
+
 # 🚀 ElasticSearchPractice
 
 ## 📦 Proje Açıklaması
@@ -16,17 +17,14 @@ Bu proje, **.NET 8 Web API** ile geliştirilmiş bir **ElasticSearch CRUD servis
 ---
 
 ## 🗂️ Klasör Yapısı
+
+```
 src/
-
-├── Project.Api -> API Katmanı (Controller, Program.cs)
-
-├── Project.Application -> İş Mantığı, Services, Interfaces
-
-├── Project.Domain -> Entity (Product)
-
-├── Project.Infrastructure -> ElasticSearch işlemleri (Repository, Client)
-
-
+├── Project.Api               -> API Katmanı (Controller, Program.cs)
+├── Project.Application       -> İş Mantığı, Services, Interfaces
+├── Project.Domain            -> Entity (Product)
+├── Project.Infrastructure    -> ElasticSearch işlemleri (Repository, Client)
+```
 
 ---
 
@@ -58,57 +56,73 @@ services:
 volumes:
   elasticsearch-data:
     driver: local
+```
 
+#### Çalıştır:
 
-Çalıştır:
-
+```bash
 docker compose up -d
+```
 
+---
 
-2️⃣ API Projeyi Çalıştır
+### 2️⃣ API Projeyi Çalıştır
 
+```bash
 dotnet build
 dotnet run --project src/Project.Api
+```
 
-Swagger Arayüzü:
-http://localhost:5000/swagger
+Swagger Arayüzü:  
+[http://localhost:5000/swagger](http://localhost:5000/swagger)
 
-🔗 API Endpointleri
-| Method | Endpoint             | Açıklama                  |
-| ------ | -------------------- | ------------------------- |
-| POST   | `/api/products`      | Yeni ürün ekler           |
-| GET    | `/api/products`      | Ürünleri listeler         |
-| PUT    | `/api/products`      | Ürün günceller            |
-| DELETE | `/api/products/{id}` | Ürün siler                |
-| POST   | `/api/products/seed` | 100 adet sahte veri ekler |
-| GET    | `/health`            | ElasticSearch kontrolü    |
+---
 
+## 🔗 API Endpointleri
 
-🔍 Kibana Dashboard
-Kibana Arayüzü:
-http://localhost:5601
+| Method | Endpoint               | Açıklama               |
+|---------|------------------------|------------------------|
+| POST    | `/api/products`         | Yeni ürün ekler         |
+| GET     | `/api/products`         | Ürünleri listeler       |
+| PUT     | `/api/products`         | Ürün günceller          |
+| DELETE  | `/api/products/{id}`    | Ürün siler              |
+| POST    | `/api/products/seed`    | 100 adet sahte veri ekler |
+| GET     | `/health`               | ElasticSearch kontrolü |
 
-Discover için:
-1- Stack Management > Index Patterns
+---
 
-2- Yeni pattern oluşturun:
+## 🔍 Kibana Dashboard
+
+Kibana Arayüzü:  
+[http://localhost:5601](http://localhost:5601)
+
+### Discover için:
+
+1. **Stack Management > Index Patterns**  
+2. Yeni pattern oluşturun:
+
+```
 products*
+```
 
-3-Discover menüsünde verilerinizi görebilirsiniz.
+3. Discover menüsünde verilerinizi görebilirsiniz.
 
-🧰 Kullanılan Teknolojiler
-.NET 8 Web API
+---
 
-ElasticSearch 9.0.3
+## 🧰 Kullanılan Teknolojiler
 
-Elastic.Clients.Elasticsearch 9.0.7
+- .NET 8 Web API  
+- ElasticSearch 9.0.3  
+- Elastic.Clients.Elasticsearch 9.0.7  
+- Kibana 9.0.3  
+- FluentValidation  
+- Serilog  
+- Bogus (Sahte veri üretimi)  
+- Docker / Docker Compose  
 
-Kibana 9.0.3
+---
 
-FluentValidation
+## 📝 Geliştiren
 
-Serilog
-
-Bogus (Sahte veri üretimi)
-
-Docker / Docker Compose
+Alptekin Erol  
+ElasticSearchPractice Projesi - 2025
