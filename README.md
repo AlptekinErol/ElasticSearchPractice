@@ -122,6 +122,15 @@ products*
 
 ---
 
+## ElasticSearchPractice - Roadmap
+
+✅ Basic CRUD & Search  
+✅ Docker + Kibana setup  
+🟢 Next: Nested Query  
+🟢 Next: Range Query  
+🔵 Future: Aggregation & Analytics  
+🔵 Future: Ingest Pipeline  
+
 ## 📝 Geliştiren
 
 Alptekin Erol  
